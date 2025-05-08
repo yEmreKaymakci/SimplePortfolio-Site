@@ -1,0 +1,288 @@
+/* === Genel Ayarlar === */
+:root {
+    --primary-color: #517293;
+    --background-color: #f7f7f7;
+    --text-color: #333;
+    --highlight-color: #b49720;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* === Navigasyon === */
+  nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a.active {
+    border-bottom: 2px solid var(--highlight-color);
+  }
+    /*Animasyonlu geçiş*/
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInMove 1s ease-out forwards;
+    }
+    
+    @keyframes fadeInMove {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  /* === Anasayfa Banner === */
+  .header-banner {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .header-banner img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  .header-banner h1 {
+    margin-top: 1rem;
+  }
+  h1 {
+    color: #e6e5e5;
+    font-family: 'Arial', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: auto;
+    background: linear-gradient(to right, #517293); /* Gümüş tonlarında arkaplan */
+
+}
+
+
+  /* === Anasayfa - Giriş Bölümü === */
+.intro {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .profil-foto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-color: var(--highlight-color);
+    color: black;
+  }
+
+  /* ==About Sayfası== */
+  .about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .about-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .about-image img:hover {
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-text h1 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Hover efekti Liste maddeleri*/
+
+  .about-list li {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-left: 6px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .about-list li:hover {
+    transform: translateX(8px);
+    background-color: #f0f8ff;
+  }
+
+
+  
+
+
+  /*İmza efekti*/
+  .signature {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.8rem;
+    color: #444;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    opacity: 0.8;
+  }
+  
+
+  
+  /*Hizmetler sayfası*/
+  .services-section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .services-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #e6e5e5;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background-color: #517293;
+    border-left: 5px solid var(--highlight-color);
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    color: #C0C0C0;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  
+  .service-card h2 {
+    color: #e9c32d;
+    margin-bottom: 0.5rem;
+  }
+  
+
+  /* == Galeri sayfası == */
+  .gallery-section {
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  /* == Contact sayfası == */
+  .contact-section {
+    padding: 3rem 1rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .contact-list li {
+    background-color: #f0f8ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--highlight-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background-color 0.3s;
+  }
+  
+  .contact-list li:hover {
+    background-color: #e6f0fa;
+  }
+  
+  .contact-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .contact-list a:hover {
+    text-decoration: underline;
+  }
+  
